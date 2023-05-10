@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Marvel';
+    src: url(./font/Bebas-Regular.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(236, 7, 7);
+}
+
+header {
+    text-align: center;
+    font-family: 'Marvel';
+    font-size: 40pt;
+    color: white;
+    padding-top: -100px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 155px);
+    grid-template-rows: repeat(3, 155px);
+    grid-gap: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-left: 355px;
+
+}
+
+.gallery {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transition:  0.5s;
+    transform-style: preserve-3d;
+    border-radius: 3%;
+}
+
+.front, .back {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    backface-visibility: hidden;
+    border-radius: 3%;
+}
+.front {
+    background-color: black;
+    color: black;
+}
+  
+.back {
+    background-color: white;
+    color: red;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%;
+    width: 150px;
+    height: 150px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    object-fit: cover;
+    border-radius: 3%;
+}
+
+.gallery:hover {
+    box-shadow: 8px 8px 8px black;
+}
+
+.gallery:active {
+    transform: rotateY(180deg);
+}
